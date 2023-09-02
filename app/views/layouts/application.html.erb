@@ -18,6 +18,9 @@
     
     <div class="container">
       <div class="row">
+      <% flash.each do |key, value| %>
+            <%= tag.div value, class: "alert alert-#{key} mt-3", role: "alert" %>
+        <% end %>
         <%= yield %>
       </div>
     </div>
