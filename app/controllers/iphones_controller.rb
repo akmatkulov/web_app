@@ -21,7 +21,7 @@ class IphonesController < ApplicationController
 
   def show
   end
-  
+    
   def edit
   end
 
@@ -38,14 +38,14 @@ class IphonesController < ApplicationController
     redirect_to iphones_path
   end 
 
-private
+  private
   
-  def iphone_params
-    params.require(:iphone).permit(:title, :body, :img, :price)
-  end
+    def iphone_params
+      params.require(:iphone).permit(:title, :body, :img, :price)
+    end
 
-  def find_iphone!
-    @iphone = Iphone.find(params[:id])
-  end
+    def find_iphone!
+      @iphone = Iphone.find(params[:id])
+    end
 
 end
