@@ -1,4 +1,7 @@
 class IphonesController < ApplicationController
+
+  before_action :find_iphone!, only: [:show, :edit, :update, :destroy]
+
   def index
     @iphones = Iphone.all
   end
@@ -17,15 +20,12 @@ class IphonesController < ApplicationController
   end
 
   def show
-    @iphone = Iphone.find(params[:id])
   end
   
   def edit
-    @iphone = Iphone.find(params[:id])
   end
 
   def update
-    @iphone = Iphone.find(params[:id])
     if @iphone.update iphone_params
       redirect_to iphones_path
     else
@@ -34,7 +34,6 @@ class IphonesController < ApplicationController
   end
 
   def destroy
-    @iphone = Iphone.find(params[:id])
     @iphone.destroy
     redirect_to iphones_path
   end 
@@ -42,7 +41,11 @@ class IphonesController < ApplicationController
 private
   
   def iphone_params
-    params.require(:iphone).permit(:title, :body, :img)
+    params.require(:iphone).permit(:title, :body, :img, :price)
+  end
+
+  def find_iphone!
+    @iphone = Iphone.find(params[:id])
   end
 
 end

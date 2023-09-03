@@ -1,8 +1,9 @@
 <h2>Show Page</h2>
-<div class="card" style="width: 18rem;">
+<div class="card " style="width: 18rem;">
   <img src="<%= @iphone.img %>" class="card-img-top" alt="<%= @iphone.title %>">
   <div class="card-body">
     <h5 class="card-title"><%= @iphone.title %></h5>
+    <h6 class="card-subtitle mb-2 fw-bold">Price: <%= @iphone.price %>$</h6>
     <p class="card-text"><%= @iphone.body %></p>
     <%= link_to 'Edit', edit_iphone_path(@iphone), class: "btn btn-danger" %>
     <%= button_to 'Destroy', @iphone, method: :delete, class: "btn btn-warning" %>
