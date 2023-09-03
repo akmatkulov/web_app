@@ -5,7 +5,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= iphone.title %></h5>
     <p class="card-text"><%= iphone.body%></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <%= link_to 'Show', iphone_path(iphone), class: 'btn btn-info' %>
   </div>
 </div>
 <% end %>

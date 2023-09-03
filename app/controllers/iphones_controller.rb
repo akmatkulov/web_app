@@ -14,7 +14,30 @@ class IphonesController < ApplicationController
     else
       render :new
     end
-end
+  end
+
+  def show
+    @iphone = Iphone.find(params[:id])
+  end
+  
+  def edit
+    @iphone = Iphone.find(params[:id])
+  end
+
+  def update
+    @iphone = Iphone.find(params[:id])
+    if @iphone.update iphone_params
+      redirect_to iphones_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @iphone = Iphone.find(params[:id])
+    @iphone.destroy
+    redirect_to iphones_path
+  end 
 
 private
   
