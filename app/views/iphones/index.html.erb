@@ -1,0 +1,11 @@
+<h2>All Iphones</h2>
+<% @iphones.each do |iphone| %>
+<div class="card" style="width: 18rem;">
+  <img src="<%= iphone.img %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= iphone.title %></h5>
+    <p class="card-text"><%= iphone.body%></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<% end %>

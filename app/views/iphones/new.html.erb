@@ -1,0 +1,16 @@
+<h2>Add New Iphone</h2>
+
+<%= form_with model: @iphone do |f| %>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.text_field :img %>
+  </div>
+
+  <%= f.submit 'Create' %>
+<% end %>
+
