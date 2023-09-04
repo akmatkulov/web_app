@@ -1,25 +1,4 @@
 <h2>Add New Iphone</h2>
 
-<%= form_with model: @iphone do |f| %>
-
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title, required: true, minlength: 2, class: "form-control" %>
-  </div>
-  <div>
-    <%= f.label :body %>
-    <%= f.text_area :body, required: true, minlength: 5, class: "form-control" %>
-  </div>
-  <div>
-    <%= f.label :price %>
-    <%= f.text_field :price, required: true, minlength: 2, class: "form-control" %>
-  </div>
-  <div>
-    <%= f.label :img %>
-    <%= f.text_field :img, required: true, minlength: 5, class: "form-control" %>
-  </div>
-  <br>
-  <%= f.submit 'Submit', class: "btn btn-primary" %>
-
-<% end %>
+<%= render 'form' %>
 
