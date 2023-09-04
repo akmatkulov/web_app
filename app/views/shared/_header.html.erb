@@ -1,21 +1,23 @@
-<nav class="navbar navbar-expand-lg bg-success-subtle text-emphasis-success">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<%= iphones_path %>"><i class="fa-brands fa-apple fa-lg"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to 'Home', root_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'All Phone', iphones_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Create New Phone', new_iphone_path, class: 'nav-link' %>
-        </li>
-      </ul>
+<%= provide :main_menu do %>
+  <nav class="navbar navbar-expand-lg bg-primary-subtle border border-primary-subtle rounded-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= iphones_path %>"><i class="fa-brands fa-apple fa-lg"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= nav_tab 'Home Page', root_path, class: 'nav-link', current_page: current_page %>
+          </li>
+          <li class="nav-item">
+            <%= nav_tab 'All Phones', iphones_path, class: 'nav-link', current_page: current_page %>
+          </li>
+          <li class="nav-item">
+            <%= nav_tab 'Add New Iphone', new_iphone_path, class: 'nav-link', current_page: current_page %>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+<% end %>
