@@ -235,7 +235,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
-  turbolinks
+  turbolinks (~> 5.2.0)
   tzinfo-data
   web-console
   webdrivers

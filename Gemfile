@@ -72,4 +72,4 @@ group :test do
 end
 
 gem 'cssbundling-rails'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5.2.0'
