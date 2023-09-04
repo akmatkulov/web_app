@@ -1,20 +1,22 @@
+<%= render 'shared/errors', object: @iphone %>
+
 <%= form_with model: @iphone do |f| %>
 
   <div>
-    <%= f.label :title %>
-    <%= f.text_field :title, required: true, minlength: 2, class: "form-control" %>
+    <%= f.label :title, class: "label" %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div>
-    <%= f.label :body %>
-    <%= f.text_area :body, required: true, minlength: 5, class: "form-control" %>
+    <%= f.label :body, class: "label" %>
+    <%= f.text_area :body, class: "form-control" %>
   </div>
   <div>
-    <%= f.label :price %>
-    <%= f.text_field :price, required: true, minlength: 2, class: "form-control" %>
+    <%= f.label :price, class: "label" %>
+    <%= f.text_field :price, class: "form-control" %>
   </div>
   <div>
-    <%= f.label :img %>
-    <%= f.text_field :img, required: true, minlength: 5, class: "form-control" %>
+    <%= f.label :img, class: "label" %>
+    <%= f.text_field :img, class: "form-control" %>
   </div>
   <br>
   <%= f.submit 'Submit', class: "btn btn-primary" %>
