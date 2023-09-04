@@ -13,6 +13,7 @@ class IphonesController < ApplicationController
   def create
     @iphone = Iphone.new iphone_params
     if @iphone.save
+      flash[:success] = "Iphone Created"
       redirect_to iphones_path
     else
       render :new
@@ -27,6 +28,7 @@ class IphonesController < ApplicationController
 
   def update
     if @iphone.update iphone_params
+      flash[:success] = "Iphone Updated"
       redirect_to iphones_path
     else
       render :edit
@@ -35,6 +37,7 @@ class IphonesController < ApplicationController
 
   def destroy
     @iphone.destroy
+    flash[:success] = "Iphone Deleted"
     redirect_to iphones_path
   end 
 
