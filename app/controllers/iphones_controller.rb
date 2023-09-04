@@ -21,6 +21,8 @@ class IphonesController < ApplicationController
   end
 
   def show
+    @review = @iphone.reviews.build
+    @reviews = @iphone.reviews.order created_at: :desc
   end
     
   def edit
