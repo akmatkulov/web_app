@@ -3,7 +3,7 @@ class IphonesController < ApplicationController
   before_action :find_iphone!, only: [:show, :edit, :update, :destroy]
 
   def index
-    @iphones = Iphone.all.page params[:page]
+    @pagy, @iphones = pagy Iphone.all
   end
 
   def new
@@ -22,7 +22,7 @@ class IphonesController < ApplicationController
 
   def show
     @review = @iphone.reviews.build
-    @reviews = @iphone.reviews.order created_at: :desc
+    @pagy, @reviews = pagy @iphone.reviews.order(created_at: :desc)
   end
     
   def edit

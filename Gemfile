@@ -74,5 +74,4 @@ end
 
 gem 'cssbundling-rails', '~> 1.2'
 gem 'turbolinks', '~> 5.2.0'
-
-gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem 'pagy', '~> 6.0.4'

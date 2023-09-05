@@ -2,10 +2,9 @@
 
 <% currently_at 'All Phones' %>
 
-<%= paginate @iphones %>
-
-<h2>All Iphones</h2>
-  <div class="container text-center">
+<h2 class="mb-3">All Iphones</h2>
+<%= raw pagy_bootstrap_nav @pagy %>
+  <div class="container text-center mb-3">
     <div class="row">
     <% @iphones.each do |iphone| %>
       <div class="col-md-4">
@@ -22,3 +21,4 @@
       <% end %>
     </div>
   </div>
+<%= raw pagy_bootstrap_nav @pagy %>
