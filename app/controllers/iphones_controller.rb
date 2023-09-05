@@ -3,7 +3,7 @@ class IphonesController < ApplicationController
   before_action :find_iphone!, only: [:show, :edit, :update, :destroy]
 
   def index
-    @iphones = Iphone.all
+    @iphones = Iphone.all.page params[:page]
   end
 
   def new
