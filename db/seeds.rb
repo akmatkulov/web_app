@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Faker
+30.times do
+  title = Faker::Device.model_name
+  body = Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4)
+  price = Faker::Commerce.price
+  img = Faker::LoremFlickr.image(size: "50x60") #=> "https://loremflickr.com/50/60" #=> "https://loremflickr.com/50/60/sports"
+  Iphone.create title: title, body: body, price: price, img: img 
+end

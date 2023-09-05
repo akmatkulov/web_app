@@ -12,11 +12,10 @@
 </div>
 
 <hr class="my-3">
-<div>
-  <h2>Write your review</h2>
-  <%= render 'reviews/form' %>
-</div>
+
+<h2>Write your review</h2>
+<%= render 'reviews/form' %>
 
 <h2 class="mt-3">Reviews</h2>
-
-<%= render @reviews%>
+<%= render partial: 'reviews/review', collection: @reviews, 
+  as: :review, locals: { iphone: @iphone } %>

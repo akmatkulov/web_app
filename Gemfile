@@ -71,5 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'cssbundling-rails'
+gem 'cssbundling-rails', '~> 1.2'
 gem 'turbolinks', '~> 5.2.0'
+gem 'faker', '~> 3.2', '>= 3.2.1'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'

@@ -12,7 +12,7 @@
           <div class="card-body">
           <h5 class="card-title"><%= iphone.title %></h5>
           <h6 class="card-subtitle mb-2 fw-bold">Price: <%= iphone.price %>$</h6>
-            <p class="card-text"><%= iphone.body%></p>
+            <p class="card-text"><%= truncate strip_tags(iphone.body), length: 30 %></p>
             <%= link_to 'Show', iphone_path(iphone), class: 'btn btn-info' %>
           </div>
         </div>
