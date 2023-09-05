@@ -1,0 +1,11 @@
+<div class="card border-primary-subtle rounded-3">
+  <div class="card-header">
+    <%= strip_tags(review.author) %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Rating: <%= strip_tags(review.rating) %></h5>
+    <p class="card-text"><%= strip_tags(review.body) %></p>
+    <%= link_to 'Edit', edit_iphone_review_path(@iphone, review), class: "btn btn-danger" %>
+    <%= button_to 'Destroy', iphone_review_path(@iphone, review), method: :delete, class: "btn btn-warning" %>
+  </div>
+</div>
